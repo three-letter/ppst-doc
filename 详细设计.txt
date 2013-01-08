@@ -45,6 +45,17 @@
 			Uri:    http://www.ppst.com/users/123/edit
 			Params: user avatar
 			Method: put
+		
+		数据库设计
+			Table:   user
+			Fields:  name			    string(8)       # 用户名
+			         password     string(64)      # md5后的密码
+	             salt         string(64)      # 加密方式中的随机值
+	             email        string(32)      # 验证邮箱
+	             alipay       string(32)      # 支付宝帐号
+	             create_time  timestamp       # 用户注册时间
+							 update_time  timestamp       # 备用：上次登录时间 最近更新时间等
+
 
 	
 	视播中心 - Broadcast center
