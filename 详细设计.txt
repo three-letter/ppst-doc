@@ -12,7 +12,7 @@
 
 		2） 用户登录(login)
 			Url:     http://www.ppst.com/login
-      Uri:     http://www.ppst.com/users/login
+			Uri:     http://www.ppst.com/users/login
 			Params:  name pwd
 			Method:  post
 
