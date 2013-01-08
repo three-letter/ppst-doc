@@ -1,5 +1,3 @@
-=begin
-
 	平台前期的整体功能大概分为四个部分：用户中心  视播中心  评论中心  消息中心
 
 	用户中心 - User Center
@@ -49,18 +47,18 @@
 			Method: put
 		
 		数据库设计
-			Table:   user
-			Fields:  name					string(8)       # 用户名
-               password			string(64)      # md5后的密码
-               salt					string(64)      # 加密方式中的随机值
-               email				string(32)      # 验证邮箱
-               alipay				string(32)      # 支付宝帐号
-               create_time	timestamp       # 用户注册时间
-               update_time	timestamp       # 备用：上次登录时间 最近更新时间等
+			Table:  users
+			Fields:
+				name					string(8)       # 用户名
+				password			string(64)      # md5后的密码
+				salt					string(64)      # 加密方式中的随机值
+				email				  string(32)      # 验证邮箱
+				alipay				string(32)      # 支付宝帐号
+				create_time	  timestamp       # 用户注册时间
+				update_time	  timestamp       # 备用：上次登录时间 最近更新时间等
 
 
 	
 	视播中心 - Broadcast center
 
 
-=end
