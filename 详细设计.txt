@@ -107,7 +107,7 @@
 			Fields:
 				user_id         integer         # 求视播者ID
 				title           string(32)      # 视播需求标题
-				desc		string(512)     # 视播的详细描述 
+				description	string(512)     # 视播的详细描述 
 				price		integer		# 视频悬赏价格	
 				reward_cast_id  integer         # 满意的视播ID
 				created_at	timestamp       # 悬赏视频时间
