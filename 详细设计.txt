@@ -61,4 +61,54 @@
 	
 	视播中心 - Broadcast center
 
+	        1） 分享视播
+			Url:    http://www.ppst.com/casts/new
+                        Uri:    http://www.ppst.com/casts
+			Params: user_id title casts_attachment price free_time 
+			Method: post
 
+                2） 观看视播
+			Url:    http://www.ppst.com/casts/1
+			Params: user_id cast_id
+			Method: get
+
+		3） 悬赏视播
+			Url:    http://www.ppst.com/reward_casts/new
+			Uri:    http://www.ppst.com/reward_casts
+                        Params: user_id title desc price 
+                        Method: post
+
+		4） 回视播
+			Url:    http://www.ppst.com/reward_casts/result
+			Uri:    http://www.ppst.com/casts
+			Params: user_id need_cast_id url
+			Methdo: post
+
+
+		数据库设计
+			Table:  casts
+			Fields:
+				user_id         integer         # 视播分享者ID
+				title		string(32)      # 视播的标题
+				url     	string(64)      # 视播上传后的url
+				price		integer         # 分享价格
+				free_time	integer         # 试看时间
+				created_at	timestamp       # 用户注册时间
+				updated_at	timestamp       # 备用：上次登录时间 最近更新时间等
+
+			Table: watch_casts
+			Fields:
+				user_id         integer         # 视播观看者ID
+				cast_id         integer         # 视播ID
+				created_at      timestamp       # 观看时间
+				updated_at      timestamp       # 更新时间
+
+			Table: reward_casts
+			Fields:
+				user_id         integer         # 求视播者ID
+				title           string(32)      # 视播需求标题
+				desc		string(512)     # 视播的详细描述 
+				price		integer		# 视频悬赏价格	
+				reward_cast_id  integer         # 满意的视播ID
+				created_at	timestamp       # 悬赏视频时间
+				updated_at	timestamp	# 更新时间
